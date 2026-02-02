@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Series Collection 📺</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container-header">
+            <h1>🎬 My Series Collection</h1>
+            <p class="tagline">Personal watchlist & ratings tracker</p>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-number" id="watchedCount">0</div>
+            <div class="stat-label">Watched</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="toWatchCount">0</div>
+            <div class="stat-label">To Watch</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="totalEpisodes">0</div>
+            <div class="stat-label">Episodes</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" id="avgRating">0.0</div>
+            <div class="stat-label">Avg Rating</div>
+        </div>
+        
+    </div>
+
+    <!-- Filters -->
+    <div class="container">
+        <div class="filters-section">
+            <input type="text" id="searchInput" placeholder="🔍 Search series..." class="search-input">
+            
+            <select id="statusFilter" class="filter-select">
+                <option value="all">All Status</option>
+                <option value="watched">✅ Watched</option>
+                <option value="towatch">📌 To Watch</option>
+            </select>
+
+            <select id="categoryFilter" class="filter-select">
+                <option value="all">All Categories</option>
+                <option value="series">📺 Series</option>
+                <option value="anime">🎌 Anime</option>
+            </select>
+
+            <select id="sortFilter" class="filter-select">
+                <option value="rating-desc">Rating (High to Low)</option>
+                <option value="rating-asc">Rating (Low to High)</option>
+                <option value="name">Name (A-Z)</option>
+                <option value="episodes-desc">Episodes (Most)</option>
+            </select>
+
+            <button onclick="resetFilters()" class="reset-btn">Reset 🔄</button>
+        </div>
+
+        <!-- Series Grid -->
+         
+        <div id="seriesGrid" class="series-grid">
+            <!-- Series will be populated here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🎬 Personal Series Tracker | Total: <span id="totalCount">0</span> series</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
